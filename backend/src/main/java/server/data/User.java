@@ -6,11 +6,13 @@ import lombok.experimental.Accessors;
 @Data
 @Accessors(chain = true)
 public class User {
-    private String account;
-    private String password;
-    private String matchingPassword;
+    private long userId;
+
+    private String username;
     private String email;
-    private String userAvatar;
-    private String authority;
-    private String token;
+
+    public User(String username, String email) {
+        this.setUsername(username);
+        this.setEmail(email);
+    }
 }
