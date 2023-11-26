@@ -7,8 +7,8 @@ import lombok.experimental.Accessors;
 @Data
 @Accessors(chain = true)
 public class Donation {
-  private Long donationId;
-  private Long userId;
-  private Long projectId;
+  private long donationId;
+  private long userId;
+  private long projectId;
   private Date donationTime;
 }

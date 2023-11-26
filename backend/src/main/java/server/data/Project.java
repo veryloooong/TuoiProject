@@ -7,12 +7,21 @@ import lombok.experimental.Accessors;
 @Data
 @Accessors(chain = true)
 public class Project {
-  private Long id;
+  private long id;
 
   private String title;
   private String description;
   private Date startDate;
   private Date endDate;
-  private Long currentFund;
-  private Long goalFund;
+  private long currentFund;
+  private long goalFund;
+
+  public Project(String title, String description, Date startDate, Date endDate, long goalFund) {
+    this.setTitle(title);
+    this.setDescription(description);
+    this.setStartDate(startDate);
+    this.setEndDate(endDate);
+    this.setCurrentFund(0);
+    this.setGoalFund(goalFund);
+  }
 }
