@@ -1,3 +1,4 @@
+// TODO: Quan tâm sau
 package server.data;
 
 import lombok.Data;

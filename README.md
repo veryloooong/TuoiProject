@@ -1,10 +1,5 @@
 # Tưới SoFund Codebase
 
-## Front-end
-
-- UI/UX: Coi như xong
-- JS: Thực hiện dần
-
 ## Back-end
 
 - SQL DB: MariaDB / MySQL
@@ -13,16 +8,8 @@
 - Diễn đàn: [Disqus Comment System](https://support.haravan.com/support/solutions/articles/42000087481-c%C3%A0i-%C4%91%E1%BA%B7t-v%C3%A0-c%E1%BA%A5u-h%C3%ACnh-disqus-comment-system)
 - Users: [Google Sign In](https://developers.google.com/identity)
 
-## Dependencies
+## Dependencies (todo)
 
-- tailwindcss
-- postcss
-- autoprefixer
-- react-router-dom
-- react-markdown
-
-## Commands (todo)
-
-- Chạy khi code:
-
-``npm run dev``
+## TODOs
+- [ ] Viết code để truy vấn được DB và trả về người dùng dưới dạng HTTP request
+- [ ] Thực hiện việc gửi HTTP req ở front-end về back-end để tiếp nhận

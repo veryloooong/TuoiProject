@@ -3,18 +3,20 @@ package server.data;
 import lombok.Data;
 import lombok.experimental.Accessors;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+
+@Entity
 @Data
 @Accessors(chain = true)
 public class Course {
-  private long id;
+  @Id
+  @GeneratedValue(strategy = GenerationType.AUTO)
+  private Long id;
 
   private String title;
   private String description;
   private long price;
-
-  public Course(String title, String description, long price) {
-    this.setTitle(title);
-    this.setDescription(description);
-    this.setPrice(price);
-  }
 }

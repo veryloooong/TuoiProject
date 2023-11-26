@@ -1,21 +1,9 @@
 package server.repository.course;
 
+import org.springframework.data.repository.CrudRepository;
+
 import server.data.Course;
 
-public interface CourseRepository {
-  // create
-  Course createCourse(String title, String description, long price);
+public interface CourseRepository extends CrudRepository<Course, Long> {
 
-  // read
-  Course getCourseById(long id);
-
-  // update
-  void updateCourseTitle(String title);
-
-  void updateCourseDescription(String description);
-
-  void updateCoursePrice(long price);
-
-  // delete
-  void deleteCourse(long id);
 }

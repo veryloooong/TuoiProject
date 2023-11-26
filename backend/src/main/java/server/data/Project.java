@@ -4,10 +4,18 @@ import java.util.Date;
 import lombok.Data;
 import lombok.experimental.Accessors;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+
+@Entity
 @Data
 @Accessors(chain = true)
 public class Project {
-  private long id;
+  @Id
+  @GeneratedValue(strategy = GenerationType.AUTO)
+  private Long id;
 
   private String title;
   private String description;
@@ -15,13 +23,4 @@ public class Project {
   private Date endDate;
   private long currentFund;
   private long goalFund;
-
-  public Project(String title, String description, Date startDate, Date endDate, long goalFund) {
-    this.setTitle(title);
-    this.setDescription(description);
-    this.setStartDate(startDate);
-    this.setEndDate(endDate);
-    this.setCurrentFund(0);
-    this.setGoalFund(goalFund);
-  }
 }
