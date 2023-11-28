@@ -1,6 +1,7 @@
 package server.data;
 
-import java.util.Date;
+import java.time.LocalDate;
+
 import lombok.Data;
 import lombok.experimental.Accessors;
 
@@ -21,8 +22,8 @@ public class Project {
 
   private String title;
   private String description;
-  private Date startDate;
-  private Date endDate;
-  private long currentFund;
-  private long goalFund;
+  private LocalDate startDate;
+  private LocalDate endDate;
+  private Long currentFund;
+  private Long goalFund;
 }

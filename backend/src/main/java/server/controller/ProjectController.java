@@ -7,16 +7,16 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import server.data.Project;
-import server.repository.project.ProjectRepository;
+import server.service.project.ProjectService;
 
 @Controller
-@RequestMapping(path = "/projects")
+@RequestMapping(path = "/api/v1/projects")
 public class ProjectController {
   @Autowired
-  private ProjectRepository projectRepository;
+  private ProjectService projectService;
 
   @GetMapping(path = "/all")
   public @ResponseBody Iterable<Project> getAllProjects() {
-    return projectRepository.findAll();
+    return projectService.findAllProjects();
   }
 }
