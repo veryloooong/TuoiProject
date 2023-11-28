@@ -1,4 +1,4 @@
-INSERT INTO projects(
+INSERT INTO project(
     id,
     title,
     description,
@@ -14,7 +14,7 @@ VALUES (
     '2024-01-01',
     100000000
   );
-INSERT INTO projects(
+INSERT INTO project(
     id,
     title,
     description,
@@ -30,7 +30,7 @@ VALUES (
     '2023-12-31',
     200000000
   );
-INSERT INTO projects(
+INSERT INTO project(
     id,
     title,
     description,
@@ -46,21 +46,21 @@ VALUES (
     '2025-01-01',
     125000000
   );
-INSERT INTO courses(id, title, description, price)
+INSERT INTO course(id, title, description, price)
 VALUES (
     1,
     'Khóa 1',
     'Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Fusce eu dui ut sem ornare bibendum. Mauris mollis lacus metus, in sagittis arcu pulvinar et. Nam porta eleifend eros, vitae placerat est euismod ullamcorper. Praesent ultrices ac purus a pharetra. Nunc vel ex finibus, rutrum nisi sit amet, aliquet augue. Nulla aliquet bibendum neque in facilisis.',
     5000000
   );
-INSERT INTO courses(id, title, description, price)
+INSERT INTO course(id, title, description, price)
 VALUES (
     2,
     'Khóa 2',
     'Nulla lacinia nunc et risus consectetur lobortis. Praesent vitae vehicula felis. Donec accumsan nisi sit amet enim aliquet convallis. Aenean vestibulum laoreet quam, vitae tincidunt nibh tempus et. Suspendisse ullamcorper lectus lectus, eu gravida dui pharetra ut. Vivamus in purus porta, cursus lectus eu, pulvinar turpis. In luctus congue elit sit amet pulvinar.',
     2000000
   );
-INSERT INTO courses(3, title, description, price)
+INSERT INTO course(id, title, description, price)
 VALUES (
     3,
     'Khóa 3',
