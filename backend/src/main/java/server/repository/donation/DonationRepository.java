@@ -2,8 +2,7 @@ package server.repository.donation;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
-import server.data.Donation;
-import server.data.Donation;
+import server.data.pojo.Donation;
 
 import java.util.List;
 

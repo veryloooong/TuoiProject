@@ -1,4 +1,6 @@
-package server.data;
+package server.data.pojo;
+
+import java.util.Date;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -11,11 +13,12 @@ import org.springframework.data.relational.core.mapping.Table;
 @Data
 @Accessors(chain = true)
 @Entity
-@Table(name = "comment")
-public class User {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
-    private String username;
-    private String email;
+@Table(name = "donation")
+public class Donation {
+  @Id
+  @GeneratedValue(strategy = GenerationType.IDENTITY)
+  private Long id;
+  private Long userId;
+  private Long projectId;
+  private Date donationTime;
 }

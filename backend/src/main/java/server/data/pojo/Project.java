@@ -1,4 +1,4 @@
-package server.data;
+package server.data.pojo;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;

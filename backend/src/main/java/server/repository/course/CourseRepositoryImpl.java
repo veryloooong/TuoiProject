@@ -1,9 +1,8 @@
 package server.repository.course;
 
-import jakarta.persistence.PersistenceContext;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
-import server.data.Course;
+import server.data.pojo.Course;
 
 import java.util.List;
 
