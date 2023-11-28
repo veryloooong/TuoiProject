@@ -1,21 +1,17 @@
 package server.repository.user;
 
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+import server.data.User;
 import server.data.User;
 
-public interface UserRepository {
-    // create
-    User createUser(String name, String email);
+import java.util.List;
 
-    // read
-    User findUserById(long userId);
-
-    User findUserByUsername(String username);
-
-    // update
-    void updateUserUsername(long id, String newUsername);
-
-    void updateUserEmail(long id, String newEmail);
-
-    // delete
-    void removeUser(long id);
+@Repository
+public interface UserRepository extends JpaRepository<User,Long> {
+    public User findUserById(long UserId);
+    public User save();
+    public User update();
+    public User delete();
+    public List<User> findAll();
 }

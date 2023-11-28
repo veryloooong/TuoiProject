@@ -1,24 +1,18 @@
 package server.repository.project;
 
-import java.util.Date;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+import server.data.Project;
 import server.data.Project;
 
-public interface ProjectRepository {
-  // create
-  Project createProject(String title, String description, Date startDate, Date endDate, long goalFund);
+import java.util.List;
 
-  // read
-  Project findProjectById(long id);
+@Repository
+public interface ProjectRepository extends JpaRepository<Project,Long> {
+    public Project findProjectById(long ProjectId);
+    public Project save();
+    public Project update();
+    public Project delete();
+    public List<Project> findAll();
 
-  // update
-  void updateProjectTitle(String title);
-
-  void updateProjectDescription(String description);
-
-  void updateProjectEndDate(Date endDate);
-
-  void updateProjectCurrentFund(long currentFund);
-
-  // delete
-  void deleteProject(long id);
 }
