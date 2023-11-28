@@ -15,23 +15,27 @@ import server.service.IUserService;
 public class UserController {
     @Autowired
     private IUserService userService;
+
     @PostMapping("/create")
-    public ResponseEntity<User> create (@RequestBody User userRequest){
+    public ResponseEntity<User> create(@RequestBody User userRequest) {
         User user = userService.create(userRequest);
         return ResponseEntity.ok(user);
     }
-    @PostMapping("/create")
-    public ResponseEntity<User> update (@RequestBody User userRequest){
+
+    @PostMapping("/update")
+    public ResponseEntity<User> update(@RequestBody User userRequest) {
         User user = userService.update(userRequest);
         return ResponseEntity.ok(user);
     }
-    @PostMapping("/create")
-    public ResponseEntity<String> delete (@RequestBody User userRequest){
+
+    @PostMapping("/delete")
+    public ResponseEntity<String> delete(@RequestBody User userRequest) {
         userService.delete(userRequest);
         return ResponseEntity.ok("Delete Success!!!");
     }
-    @PostMapping("/create")
-    public ResponseEntity<User> findUserById (@RequestBody Long userId){
+
+    @PostMapping("/idk")
+    public ResponseEntity<User> findUserById(@RequestBody Long userId) {
         User user = userService.findById(userId);
         return ResponseEntity.ok(user);
     }
