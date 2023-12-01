@@ -1,17 +1,8 @@
 package server.repository.project;
 
 import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.stereotype.Repository;
-import server.data.pojo.Project;
 
-import java.util.List;
+import server.data.Project;
 
-@Repository
-public interface ProjectRepository extends JpaRepository<Project,Long> {
-    public Project findProjectById(long ProjectId);
-    public Project save();
-    public Project update();
-    public Project delete();
-    public List<Project> findAll();
-
+public interface ProjectRepository extends JpaRepository<Project, Long> {
 }
