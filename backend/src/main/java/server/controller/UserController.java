@@ -35,6 +35,7 @@ public class UserController {
   
   @PostMapping(value = "/{id}", consumes = MediaType.APPLICATION_JSON_VALUE)
   public ResponseEntity<User> createUser(@RequestBody User newUser) {
+    userService.create(newUser);
     return new ResponseEntity<User>(newUser, HttpStatus.CREATED);
   }
 }
