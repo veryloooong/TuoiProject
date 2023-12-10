@@ -1,7 +1,5 @@
 package server.data;
 
-import java.time.LocalDateTime;
-
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -20,8 +18,10 @@ public class User {
     private Long id;
 
     private String name;
-    private String username;
     private String email;
-    private LocalDateTime creationTime;
-    private Boolean deleted;
+
+    public User(String name, String email) {
+        this.name = name;
+        this.email = email;
+    }
 }

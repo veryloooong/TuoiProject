@@ -9,6 +9,8 @@ import jakarta.persistence.Table;
 
 import java.time.LocalDateTime;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+
 import lombok.Data;
 import lombok.experimental.Accessors;
 
@@ -21,6 +23,7 @@ public class Donation {
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   private Long id;
   private Long amount;
+  @JsonFormat(pattern = "dd/MM/yyyy@HH:mm:ss")
   private LocalDateTime donationTime;
   private Long userId;
   private Long projectId;

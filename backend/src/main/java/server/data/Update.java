@@ -1,6 +1,6 @@
 package server.data;
 
-import java.time.LocalDateTime;
+import java.time.LocalDate;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 
@@ -15,15 +15,14 @@ import lombok.experimental.Accessors;
 @Entity
 @Data
 @Accessors(chain = true)
-@Table(name = "comments")
-public class Comment {
+@Table(name = "updates")
+public class Update {
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   private Long id;
 
-  private Long userId;
   private Long projectId;
   private String content;
-  @JsonFormat(pattern = "dd/MM/yyyy@HH:mm:ss")
-  private LocalDateTime commentTime;
+  @JsonFormat(pattern = "dd/MM/yyyy")
+  private LocalDate date;
 }
