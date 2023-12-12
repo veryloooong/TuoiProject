@@ -1,6 +1,7 @@
 CREATE OR REPLACE TABLE projects (
     id SERIAL PRIMARY KEY,
     title NVARCHAR(255) NOT NULL,
+    provider NVARCHAR(255) NOT NULL,
     description TEXT,
     start_date DATE DEFAULT current_date(),
     end_date DATE,
@@ -9,7 +10,7 @@ CREATE OR REPLACE TABLE projects (
   );
 CREATE OR REPLACE TABLE courses (
     id SERIAL PRIMARY KEY,
-    title NVARCHAR(300) NOT NULL,
+    title NVARCHAR(255) NOT NULL,
     provider NVARCHAR(255) NOT NULL,
     description TEXT,
     price INT UNSIGNED DEFAULT 0
@@ -46,7 +47,7 @@ CREATE OR REPLACE TABLE updates (
     id SERIAL PRIMARY KEY,
     project_id BIGINT UNSIGNED NOT NULL,
     content TEXT,
-    update_time DATE,
+    update_time TIMESTAMP,
     FOREIGN KEY (project_id) REFERENCES projects(id)
   );
 CREATE OR REPLACE TABLE posts (
